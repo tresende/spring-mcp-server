@@ -1,7 +1,6 @@
 package com.tresende.demomcp
 
 import com.tresende.demomcp.service.ItemService
-import org.springframework.ai.tool.ToolCallback
 import org.springframework.ai.tool.ToolCallbacks
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -17,6 +16,4 @@ fun main(args: Array<String>) {
 @Bean
 fun getTools(
     itemService: ItemService
-): List<ToolCallback> {
-    return ToolCallbacks.from(itemService).asList()
-}
+) = ToolCallbacks.from(itemService).asList()
