@@ -14,6 +14,5 @@ fun main(args: Array<String>) {
 }
 
 @Bean
-fun getTools(
-    itemService: ItemService
-) = ToolCallbacks.from(itemService).asList()
+fun getTools(itemService: ItemService) =
+    ToolCallbacks.from(itemService).asList()

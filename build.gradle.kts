@@ -23,9 +23,6 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     runtimeOnly("com.h2database:h2")
     implementation("org.springframework.ai:spring-ai-mcp-server-spring-boot-starter:1.0.0-M6")
 }
@@ -34,8 +31,4 @@ kotlin {
     compilerOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
     }
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
