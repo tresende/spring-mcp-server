@@ -13,7 +13,6 @@ spring:
     banner-mode: off
     web-application-type: none
 
-#no-log
 logging:
   pattern:
     console:

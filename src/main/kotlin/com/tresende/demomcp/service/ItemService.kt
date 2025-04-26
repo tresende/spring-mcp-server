@@ -11,7 +11,7 @@ import java.util.*
 class ItemService(
     private val itemRepository: ItemRepository
 ) {
-    @Tool(name = "save", description = "Save an item")
+    @Tool(name = "save", description = "Save a product with a name")
     fun save(name: String) =
         itemRepository.save(
             Item(
@@ -23,7 +23,7 @@ class ItemService(
             )
         )
 
-    @Tool(name = "find_all", description = "Find all items")
+    @Tool(name = "find_all", description = "Find all products")
     fun findAll() =
         itemRepository.findAll().toList()
 }
