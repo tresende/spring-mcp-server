@@ -9,10 +9,8 @@ spring:
   ai:
     name: tresende-mcp
     version: 0.0.1
-  main:
-    banner-mode: off
-    web-application-type: none
-
-logging:
-  pattern:
-    console:
+    server:
+      name: tresende-mcp-server
+      version: 1.0.0
+      type: SYNC
+      sse-message-endpoint: /mcp/messages

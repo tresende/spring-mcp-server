@@ -1,11 +1,10 @@
 package com.tresende.demomcp
 
-import com.tresende.demomcp.service.ItemService
-import org.springframework.ai.tool.ToolCallbacks
+import com.tresende.demomcp.controller.ItemController
+import org.springframework.ai.tool.method.MethodToolCallbackProvider
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
-
 
 fun main(args: Array<String>) {
     runApplication<DemoApplication>(*args)
@@ -14,6 +13,8 @@ fun main(args: Array<String>) {
 @SpringBootApplication
 class DemoApplication {
     @Bean
-    fun getTools(itemService: ItemService) =
-        ToolCallbacks.from(itemService).asList()
+    fun toolCallbackProvider(itemController: ItemController) =
+        MethodToolCallbackProvider.builder()
+            .toolObjects(itemController)
+            .build()
 }
