@@ -4,8 +4,7 @@
 
 1- `./gradlew bootRun`  This will start the server on port 8080 by default. <br />
 2- Add MCP Configuration <br />
-VSCode Example
-
+VSCode Example:
 ```json
 {
   "mcp": {
@@ -18,3 +17,7 @@ VSCode Example
   }
 }
 ```
+<br />
+<img width="399" alt="image" src="https://github.com/user-attachments/assets/7c282613-5dbe-406d-86c7-eced4aa8f676" />
+<br />
+
